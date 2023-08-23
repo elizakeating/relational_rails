@@ -1,0 +1,3 @@
+class Orchestra < ApplicationRecord
+  
+end
