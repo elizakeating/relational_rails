@@ -57,7 +57,7 @@ Then I see each musician that is associated with that Orchestra with each musici
 
 ## ActiveRecord
 
-[ ] done
+[x] done
 
 User Story 6, Parent Index sorted by Most Recently Created 
 
@@ -68,7 +68,7 @@ And next to each of the records I see when it was created
 
 -----
 
-[ ] done
+[x] done
 
 User Story 7, Parent Child Count
 
