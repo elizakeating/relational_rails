@@ -60,9 +60,9 @@ RSpec.describe "Orchestras Index",type: :feature do
         expect(page).to have_content("Created At: #{orchestra_2.created_at}")
         expect(page).to have_content("Created At: #{orchestra_3.created_at}")
 
-        expect(created_at_1).to appear_before(created_at_2)
-        expect(created_at_1).to appear_before(created_at_3)
-        expect(created_at_2).to appear_before(created_at_3)
+        expect(created_at_3).to appear_before(created_at_1)
+        expect(created_at_3).to appear_before(created_at_2)
+        expect(created_at_2).to appear_before(created_at_1)
       end
     end
   end
