@@ -56,8 +56,6 @@ RSpec.describe "Musicians Index",type: :feature do
           orchestra_id: orchestra_1.id
         )
 
-        save_and_open_page
-        
         visit "/orchestras"
         
         click_link("Musicians Index")
