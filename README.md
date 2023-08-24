@@ -46,7 +46,7 @@ Then I see the musician with that id including the musician's attributes
 
 -----
 
-[ ] done
+[x] done
 
 User Story 5, Parent Children Index 
 
