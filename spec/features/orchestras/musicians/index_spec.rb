@@ -22,7 +22,7 @@ RSpec.describe "Orchestra Musicians Index",type: :feature do
           orchestra_id: orchestra_1.id
         )
 
-        visit "/orchestras/id/musicians"
+        visit "/orchestras/#{orchestra_1.id}/musicians"
 
         expect(page).to have_content("#{musician_1.name}")
         expect(page).to have_content("Full Time: #{musician_1.full_time}")
