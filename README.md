@@ -2,7 +2,7 @@
 
 ## CRUD
 
-[ ] done
+[x] done
 
 User Story 1, Parent Index 
 
@@ -13,7 +13,7 @@ Then I see the name of each orchestra record in the system
 
 -----
 
-[ ] done
+[x] done
 
 User Story 2, Parent Show 
 
@@ -24,7 +24,7 @@ Then I see the orchestra with that id including the orchestra's attributes
 
 -----
 
-[ ] done
+[x] done
 
 User Story 3, Child Index 
 
@@ -35,7 +35,7 @@ Then I see each musician in the system including the musician's attributes
 
 -----
 
-[ ] done
+[x] done
 
 User Story 4, Child Show 
 
@@ -46,7 +46,7 @@ Then I see the musician with that id including the musician's attributes
 
 -----
 
-[ ] done
+[x] done
 
 User Story 5, Parent Children Index 
 
