@@ -18,4 +18,32 @@ RSpec.describe "Orchestra Show",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit orchestra's show page" do
+      it "I see a count of the number of musicians associated with this orchestra" do
+        orchestra_1 = Orchestra.create!(
+          name: "Colorado Symphony",
+          auditions_open: true,
+          year_established: 1989
+        )
+        musician_1 = Musician.create!(
+          name: "Yumi Hwang-Williams",
+          full_time: true,
+          years_involved: 23,
+          orchestra_id: orchestra_1.id
+        )
+        musician_2 = Musician.create!(
+          name: "Dakota Cotugno",
+          full_time: false,
+          years_involved: 1,
+          orchestra_id: orchestra_1.id
+        )
+
+        visit "/orchestras/#{orchestra_1.id}"
+
+        expect(page).to have_content("Number of Musicians: #{orchestra_1.count_musicians}")
+      end
+    end
+  end
 end

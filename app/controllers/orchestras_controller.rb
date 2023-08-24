@@ -1,6 +1,6 @@
 class OrchestrasController < ApplicationController
   def index
-    @orchestras = Orchestra.all
+    @orchestras = Orchestra.all.order(created_at: :desc)
   end
 
   def show
