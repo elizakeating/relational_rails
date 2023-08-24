@@ -1,0 +1,7 @@
+<h1>Musicians Index</h1>
+
+<% @musicians.each do |musician| %>
+  <h2><%= musician.name %></h2>
+  <p><%= musician.full_time %></p>
+  <p><%= musician.years_involved %></p>
+<% end %>
