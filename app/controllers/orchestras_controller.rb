@@ -6,4 +6,8 @@ class OrchestrasController < ApplicationController
   def show
     @orchestra = Orchestra.find(params[:id])
   end
+
+  def new
+    
+  end
 end
