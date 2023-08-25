@@ -78,7 +78,7 @@ I see a count of the number of musicians associated with this orchestra
 
 ## Usability
 
-[ ] done
+[x] done
 
 User Story 8, Child Index Link
 
@@ -88,7 +88,7 @@ Then I see a link at the top of the page that takes me to the Musician Index
 
 -----
 
-[ ] done
+[x] done
 
 User Story 9, Parent Index Link
 
@@ -98,7 +98,7 @@ Then I see a link at the top of the page that takes me to the Orchestra Index
 
 -----
 
-[ ] done
+[x] done
 
 User Story 10, Parent Child Index Link
 
