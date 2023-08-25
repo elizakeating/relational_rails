@@ -3,6 +3,8 @@
 
 <h1>Orchestras Index</h1>
 
+<%= link_to "New Orchestra", "/orchestras/new" %>
+
 <% @orchestras.each do |orchestra| %>
   <h3><%= orchestra.name %></h3>
   <p>Created At: <%= orchestra.created_at %><p>
