@@ -150,4 +150,20 @@ RSpec.describe "Orchestras Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit the orchestra index page" do
+      describe "I see a link to create a new Orchestra record,'New Orchestra'" do
+        describe "when I click the link" do
+          it "I am taken to '/orchestras/new'" do
+            visit "/orchestras"
+
+            click_link("New Orchestra")
+
+            expect(current_path).to eq("/orchestras/new")
+          end
+        end
+      end
+    end
+  end
 end
