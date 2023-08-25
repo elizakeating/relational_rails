@@ -8,3 +8,5 @@
 <p>Year Established: <%= @orchestra.year_established %></p>
 
 <p>Number of Musicians: <%= @orchestra.count_musicians %></p>
+
+<%= link_to "Orchestra's Musicians", "/orchestras/#{@orchestra.id}/musicians" %>
