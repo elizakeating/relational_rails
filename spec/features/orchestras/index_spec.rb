@@ -120,4 +120,34 @@ RSpec.describe "Orchestras Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit a orchestra show page" do
+      it "I see a link to take me to that orchestra's musicians page" do
+        orchestra_1 = Orchestra.create!(
+          name: "Colorado Symphony",
+          auditions_open: true,
+          year_established: 1989
+        )
+        musician_1 = Musician.create!(
+          name: "Yumi Hwang-Williams",
+          full_time: true,
+          years_involved: 23,
+          orchestra_id: orchestra_1.id
+        )
+        musician_2 = Musician.create!(
+          name: "Dakota Cotugno",
+          full_time: false,
+          years_involved: 1,
+          orchestra_id: orchestra_1.id
+        )
+
+        visit "/orchestras/#{orchestra_1.id}"
+
+        click_link("Orchestra's Musicians")
+
+        expect(current_path).to eq("/orchestras/#{orchestra_1.id}/musicians")
+      end
+    end
+  end
 end
