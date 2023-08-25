@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/orchestras", to: "orchestras#index"
+  get "/orchestras/new", to: "orchestras#new"
   get "/orchestras/:id", to: "orchestras#show"
   get "/orchestras/:id/musicians", to: "orchestra_musicians#index"
 
