@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get "/orchestras", to: "orchestras#index"
   get "/orchestras/new", to: "orchestras#new"
+  post "/orchestras", to: "orchestras#create"
   get "/orchestras/:id", to: "orchestras#show"
   get "/orchestras/:id/musicians", to: "orchestra_musicians#index"
 
