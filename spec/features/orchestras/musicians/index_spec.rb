@@ -38,7 +38,7 @@ RSpec.describe "Orchestra Musicians Index",type: :feature do
   describe "as a visitor" do
     describe "when I visit an orchestra musicians index page" do
       describe "I see a link to add a new musician for that orchestra 'Create Musician" do
-        let "when I click the link I am taken to /orchestra/:id/musicians/new" do
+        it "when I click the link I am taken to /orchestra/:id/musicians/new" do
           orchestra_1 = Orchestra.create!(
             name: "Colorado Symphony",
             auditions_open: true,
