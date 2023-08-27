@@ -11,7 +11,7 @@ class MusiciansController < ApplicationController
     @musician = Musician.find(params[:id])
   end
 
-  def create
+  def update
     musician = Musician.find(params[:id])
     musician.update({
       name: params[:name],
