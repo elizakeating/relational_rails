@@ -76,7 +76,7 @@ RSpec.describe "Orchestra Show",type: :feature do
 
             click_link("Update Orchestra")
 
-            expect(current_path).to eq("/orhcestras/#{orchestra_1.id}/edit}")
+            expect(current_path).to eq("/orchestras/#{orchestra_1.id}/edit")
           end
         end
       end
