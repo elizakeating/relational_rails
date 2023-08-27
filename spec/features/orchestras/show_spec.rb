@@ -46,4 +46,40 @@ RSpec.describe "Orchestra Show",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit an orchestra show page" do
+      describe "I see a link to update the orchestra 'Update Orchestra'" do
+        describe "when I click the link 'Update Orchestra'" do
+          it "I am taken to '/orchestra/:id/edit'" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+            musician_1 = Musician.create!(
+              name: "Yumi Hwang-Williams",
+              full_time: true,
+              years_involved: 23,
+              orchestra_id: orchestra_1.id
+            )
+            musician_2 = Musician.create!(
+              name: "Dakota Cotugno",
+              full_time: false,
+              years_involved: 1,
+              orchestra_id: orchestra_1.id
+            )
+
+            visit "/orchestras/#{orchestra_1.id}"
+
+            expect(page).to have_content("Update Orchestra")
+
+            click_link("Update Orchestra")
+
+            expect(current_path).to eq("/orhcestras/#{orchestra_1.id}/edit}")
+          end
+        end
+      end
+    end
+  end
 end
