@@ -24,4 +24,34 @@ RSpec.describe "Musician Show",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit a musician show page" do
+      describe "I see a link to update that musician 'Update Musician'" do
+        describe "when I click the link" do
+          it "I am taken to '/musicians/:id/edit" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+            musician_1 = Musician.create!(
+              name: "Yumi Hwang-Williams",
+              full_time: true,
+              years_involved: 23,
+              orchestra_id: orchestra_1.id
+            )
+
+            visit "/musicians/#{musician_1.id}"
+
+            expect(page).to have_content("Update Musician")
+
+            click_link("Update Musician")
+
+            expect(current_path).to eq("/musicians/#{musician_1.id}/edit")
+          end
+        end
+      end
+    end
+  end
 end

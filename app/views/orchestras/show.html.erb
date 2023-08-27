@@ -9,4 +9,6 @@
 
 <p>Number of Musicians: <%= @orchestra.count_musicians %></p>
 
-<%= link_to "Orchestra's Musicians", "/orchestras/#{@orchestra.id}/musicians" %>
+<%= link_to "Orchestra's Musicians", "/orchestras/#{@orchestra.id}/musicians" %><br/>
+
+<%= link_to "Update Orchestra", "/orchestras/#{@orchestra.id}/edit" %>

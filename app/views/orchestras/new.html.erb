@@ -1,0 +1,14 @@
+<form action="/orchestras" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Orchestra Name:</p>
+  <input type="text" name="name"/><br/>
+  <p>Auditions Open:</p>
+  <select name="auditions_open" id="options">
+    <option value="true">true</option>
+    <option value="false">false</option>
+  </select>
+  <p>Year Established:</p>
+  <input type="number" name="year_established"><br/>
+  <br><input type="submit" value="Create Orchestra">
+</form>
+

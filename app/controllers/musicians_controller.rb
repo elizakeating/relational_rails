@@ -6,4 +6,21 @@ class MusiciansController < ApplicationController
   def show
     @musician = Musician.find(params[:id])
   end
+
+  def edit
+    @musician = Musician.find(params[:id])
+  end
+
+  def update
+    musician = Musician.find(params[:id])
+    musician.update({
+      name: params[:name],
+      full_time: params[:full_time],
+      years_involved: params[:years_involved]
+    })
+
+    musician.save
+    
+    redirect_to "/musicians/#{musician.id}"
+  end
 end
