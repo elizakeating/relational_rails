@@ -25,4 +25,16 @@ class OrchestrasController < ApplicationController
   def edit
     @orchestra = Orchestra.find(params[:id])
   end
+
+  def update
+    orchestra = Orchestra.find(params[:id])
+    orchestra.update({
+      name: params[:name],
+      auditions_open: params[:auditions_open],
+      year_established: params[:year_established]
+    })
+    orchestra.save
+    
+    redirect_to "/orchestras/#{orchestra.id}"
+  end
 end
