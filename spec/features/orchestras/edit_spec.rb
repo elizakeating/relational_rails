@@ -21,6 +21,7 @@ RSpec.describe "Edit Orchestra",type: :feature do
 
           expect(current_path).to eq("/orchestras/#{orchestra_1.id}/edit")
 
+          expect(page).to have_content("Update Orchestra")
           expect(page).to have_content("Orchestra Name:")
           expect(page).to have_content("Auditions Open:")
           expect(page).to have_content("Year Established:")
