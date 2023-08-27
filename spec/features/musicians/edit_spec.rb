@@ -33,7 +33,7 @@ RSpec.describe "Update Musician",type: :feature do
           expect(page).to have_content("Years Involved:")
 
           fill_in "name", with: "Yumi Williams"
-          select "false", from: "years_involved"
+          select "false", from: "full_time"
           fill_in "years_involved", with: "12"
 
           click_button("Update Musician")
