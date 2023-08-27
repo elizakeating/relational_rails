@@ -1,6 +1,6 @@
 class MusiciansController < ApplicationController
   def index
-    @musicians = Musician.all
+    @musicians = Musician.where(full_time: "true")
   end
 
   def show
