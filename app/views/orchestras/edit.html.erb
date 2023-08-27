@@ -1,1 +1,15 @@
-giut
+<form action="/orchestras/<%= @orchestra.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <h1>Update Orchestra</h1>
+  <p>Orchestra Name:</p>
+  <input type="text" name="name" value="<%= @orchestra.name %>"/><br/>
+  <p>Auditions Open:</p>
+  <input type="radio" name="auditions_open" id="true">
+  <label for="true">true</label>
+  <input type="radio" name="auditions_open" id="false">
+  <label for="false">false</label>
+  <p>Year Established:</p>
+  <input type="number" name="year_established" value="<%= @orchestra.year_established %>" /><br/>
+  <br><input type="submit" value="Update Orchestra">
+</form>
