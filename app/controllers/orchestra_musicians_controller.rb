@@ -5,5 +5,6 @@ class OrchestraMusiciansController < ApplicationController
   end
 
   def new
+    @orchestra = Orchestra.find(params[:id])
   end
 end
