@@ -11,7 +11,7 @@ RSpec.describe "New Musician",type: :feature do
             year_established: 1989
           )
 
-          visit "/orchestras#{orchestra_1.id}/musicians/new"
+          visit "/orchestras/#{orchestra_1.id}/musicians/new"
 
           expect(page).to have_content("Musician Name:")
           expect(page).to have_content("Full Time:")
