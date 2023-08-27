@@ -17,7 +17,7 @@ RSpec.describe "Edit Orchestra",type: :feature do
           expect(page).to have_content("Auditions Open: #{orchestra_1.auditions_open}")
           expect(page).to have_content("Year Established: #{orchestra_1.year_established}")
 
-          click_link("Edit Orchestra")
+          click_link("Update Orchestra")
 
           expect(current_path).to eq("/orchestras/#{orchestra_1.id}/edit")
 
@@ -29,7 +29,7 @@ RSpec.describe "Edit Orchestra",type: :feature do
           choose "false"
           fill_in "year_established", with: "2023"
 
-          click_button "Edit Orchestra"
+          click_button "Update Orchestra"
 
           expect(current_path).to eq("/orchestras/#{orchestra_1.id}")
 
