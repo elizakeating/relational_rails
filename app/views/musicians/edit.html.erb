@@ -1,0 +1,15 @@
+<form action="/musicians/<%= @musician.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <h1>Update Musician</h1>
+  <p>Musician Name:</p>
+  <input type="text" name="name" value="<%= @musician.name %>"/><br/>
+  <p>Full Time:</p>
+  <select name="full_time" id="options" value="<%= @musician.full_time %>">
+    <option value="true">true</option>
+    <option value="false">false</option>
+  </select>
+  <p>Years Involved:</p>
+  <input type="number" name="years_involved" value="<%= @musician.years_involved %>" /><br/>
+  <br><input type="submit" value="Update Musician">
+</form>
