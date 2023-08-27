@@ -23,6 +23,6 @@ class OrchestrasController < ApplicationController
   end
 
   def edit
-    
+    @orchestra = Orchestra.find(params[:id])
   end
 end
