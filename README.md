@@ -110,7 +110,7 @@ Then I see a link to take me to that orchestra's `musicians` page ('/orchestras/
 
 ## CRUD
 
-[ ] done
+[x] done
 
 User Story 11, Parent Creation 
 
@@ -127,7 +127,7 @@ and I am redirected to the Orchestra Index page where I see the new Orchestra di
 
 -----
 
-[ ] done
+[x] done
 
 User Story 12, Parent Update 
 
@@ -144,7 +144,7 @@ and I am redirected to the Orhcestra's Show page where I see the Orchestra's upd
 
 -----
 
-[ ] done
+[x] done
 
 User Story 13, Parent Child Creation 
 
@@ -161,7 +161,7 @@ and I am redirected to the Orchestra Musicians Index page where I can see the ne
 
 -----
 
-[ ] done
+[x] done
 
 User Story 14, Child Update 
 
