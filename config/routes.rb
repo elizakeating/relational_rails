@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post "/orchestras", to: "orchestras#create"
   get "/orchestras/:id", to: "orchestras#show"
   get "/orchestras/:id/edit", to: "orchestras#edit"
+  patch "/orchestras/:id", to: "orchestras#update"
   get "/orchestras/:id/musicians", to: "orchestra_musicians#index"
 
   get "/musicians", to: "musicians#index"
