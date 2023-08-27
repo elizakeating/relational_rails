@@ -27,7 +27,7 @@ RSpec.describe "Edit Orchestra",type: :feature do
           expect(page).to have_content("Year Established:")
 
           fill_in 'name', with: "Colorado New Symphony"
-          choose "false"
+          select 'false', from: "auditions_open"
           fill_in "year_established", with: "2023"
 
           click_button "Update Orchestra"

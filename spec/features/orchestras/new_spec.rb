@@ -12,7 +12,7 @@ RSpec.describe "New Orchestra",type: :feature do
           expect(page).to have_content("Year Established:")
 
           fill_in 'name', with: 'Random Orchestra'
-          choose 'true'
+          select 'true', from: "auditions_open"
           fill_in "year_established", with: "2023"
 
           click_button 'Create Orchestra'
