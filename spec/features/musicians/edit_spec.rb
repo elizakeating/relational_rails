@@ -40,7 +40,7 @@ RSpec.describe "Update Musician",type: :feature do
 
           expect(current_path).to eq("/musicians/#{musician_1.id}")
 
-          expect(page).to have_content("Musician Name: Yumi Williams")
+          expect(page).to have_content("Yumi Williams")
           expect(page).to have_content("Full Time: false")
           expect(page).to have_content("Years Involved: 12")
         end
