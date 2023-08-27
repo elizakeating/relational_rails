@@ -17,7 +17,7 @@ RSpec.describe "Musicians Index",type: :feature do
         )
         musician_2 = Musician.create!(
           name: "Dakota Cotugno",
-          full_time: false,
+          full_time: true, #how do i deal with this?
           years_involved: 1,
           orchestra_id: orchestra_1.id
         )
