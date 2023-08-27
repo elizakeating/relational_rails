@@ -16,9 +16,13 @@ class OrchestrasController < ApplicationController
       auditions_open: params[:auditions_open],
       year_established: params[:year_established]
     })
-    
+
     orchestra.save
 
     redirect_to "/orchestras"
+  end
+
+  def edit
+    
   end
 end
