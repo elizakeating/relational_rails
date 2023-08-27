@@ -3,11 +3,12 @@
   <p>Orchestra Name:</p>
   <input type="text" name="name"/><br/>
   <p>Auditions Open:</p>
-  <input type="radio" name="auditions_open" id="true">
-  <label for="true">true</label>
-  <input type="radio" name="auditions_open" id="false">
-  <label for="false">false</label>
+  <select name="auditions_open" id="options">
+    <option value="true">true</option>
+    <option value="false">false</option>
+  </select>
   <p>Year Established:</p>
   <input type="number" name="year_established"><br/>
   <br><input type="submit" value="Create Orchestra">
 </form>
+

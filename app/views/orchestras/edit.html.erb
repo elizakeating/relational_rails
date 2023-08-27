@@ -5,10 +5,10 @@
   <p>Orchestra Name:</p>
   <input type="text" name="name" value="<%= @orchestra.name %>"/><br/>
   <p>Auditions Open:</p>
-  <input type="radio" name="auditions_open" id="true">
-  <label for="true">true</label>
-  <input type="radio" name="auditions_open" id="false">
-  <label for="false">false</label>
+  <select name="auditions_open" id="options" value="<%= @orchestra.auditions_open %>">
+    <option value="true">true</option>
+    <option value="false">false</option>
+  </select>
   <p>Year Established:</p>
   <input type="number" name="year_established" value="<%= @orchestra.year_established %>" /><br/>
   <br><input type="submit" value="Update Orchestra">
