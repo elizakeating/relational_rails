@@ -8,6 +8,6 @@ class MusiciansController < ApplicationController
   end
 
   def edit
-    
+    @musician = Musician.find(params[:id])
   end
 end
