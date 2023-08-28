@@ -3,7 +3,9 @@
 
 <h1>Orchestra Musicians Index</h1>
 
-<%= link_to "Create Musician", "/orchestras/#{@orchestra.id}/musicians/new" %>
+<%= link_to "Create Musician", "/orchestras/#{@orchestra.id}/musicians/new" %><br/>
+
+<%= link_to "Sort By Name Alphabetically", "/orchestras/#{@orchestra.id}/musicians/alphabetize" %>
 
 <% @musicians.each do |musician| %>
   <h2><%= musician.name %></h2>
