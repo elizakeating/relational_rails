@@ -20,4 +20,8 @@ class OrchestraMusiciansController < ApplicationController
 
     redirect_to "/orchestras/#{orchestra.id}/musicians"
   end
+
+  def alphabetize
+    
+  end
 end
