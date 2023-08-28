@@ -177,7 +177,7 @@ and I am redirected to the Musician Show page where I see the Musician's updated
 
 ## ActiveRecord
 
-[ ] done
+[x] done
 
 User Story 15, Child Index only shows `true` Records 
 
@@ -187,7 +187,7 @@ Then I only see records where the boolean column is `true`
 
 -----
 
-[ ] done
+[x] done
 
 User Story 16, Sort Parent's Children in Alphabetical Order by name 
 

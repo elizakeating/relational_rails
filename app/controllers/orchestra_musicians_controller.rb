@@ -20,4 +20,9 @@ class OrchestraMusiciansController < ApplicationController
 
     redirect_to "/orchestras/#{orchestra.id}/musicians"
   end
+
+  def alphabetize
+    @orchestra = Orchestra.find(params[:id])
+    @musicians = @orchestra.musicians.order(:name)
+  end
 end
