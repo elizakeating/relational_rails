@@ -22,6 +22,7 @@ class OrchestraMusiciansController < ApplicationController
   end
 
   def alphabetize
-    
+    @orchestra = Orchestra.find(params[:id])
+    @musicians = @orchestra.musicians.order(:name)
   end
 end
