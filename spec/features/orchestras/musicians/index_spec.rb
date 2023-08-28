@@ -79,8 +79,8 @@ RSpec.describe "Orchestra Musicians Index",type: :feature do
             orchestra_id: orchestra_1.id
           )
 
-          let(:name_1) { "<p>#{musician_1.name}</p>" }
-          let(:name_2) { "<p>#{musician_2.name}</p>" }
+          let(:name_1) { "<h2>#{musician_1.name}</h2>" }
+          let(:name_2) { "<h2>#{musician_2.name}</h2>" }
 
           it "I'm taken back tot he orchestra's musicians index page where i see all of the orchestra's musicians in alphabetical order" do
             visit "/orchestras/#{orchestra_1.id}/musicians"
