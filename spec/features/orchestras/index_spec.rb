@@ -166,4 +166,28 @@ RSpec.describe "Orchestras Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit the orchestra index page" do
+      describe "next to every orchestra, I see a link to edit that orchestra's info" do
+        describe "when I click the link" do
+          it "I should be taken to that orchestra's edit page where I can update its information just like in User Story 12" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+            
+            visit "/orchestras"
+            
+            expect(page).to have_content("Update #{orchestra_1.name}")
+            
+            click_link("Update #{orchestra_1.name}", match: :first)
+            
+            expect(current_path).to eq("/orchestras/#{orchestra_1.id}/edit")
+          end
+        end
+      end
+    end
+  end
 end
