@@ -56,4 +56,45 @@ RSpec.describe "Orchestra Musicians Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit the orchestra's musicians index page" do
+      describe "I see a link to sort musicians in alphabetical order" do
+         describe "when I click on the link" do
+          it "I'm taken back tot he orchestra's musicians index page where i see all of the orchestra's musicians in alphabetical order" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+            musician_1 = Musician.create!(
+              name: "Yumi Hwang-Williams",
+              full_time: true,
+              years_involved: 23,
+              orchestra_id: orchestra_1.id
+            )
+            musician_2 = Musician.create!(
+              name: "Dakota Cotugno",
+              full_time: false,
+              years_involved: 1,
+              orchestra_id: orchestra_1.id
+            )
+
+            visit "/orchestras/#{orchestra_1.id}/musicians"
+
+            expect(page).to have_content("Sort By Alphabetical Order")
+
+            click_link("Sort By Alphabetical Order")
+
+            expect(current_path).to eq("/orchestras/#{orchestra_1.id}/musicians/alphabetize")
+
+            name_1 = find("<p>#{musician_1.name}</p>")
+            name_2 = find("<p>#{musician_2.name}</p>")
+
+            expect(name_2).to appear_before(name_1)
+          end
+        end
+      end
+    end
+  end
 end
