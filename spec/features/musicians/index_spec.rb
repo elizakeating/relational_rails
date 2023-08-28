@@ -122,4 +122,34 @@ RSpec.describe "Musicians Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit the musicians index page" do
+      describe "next to ever musician, I see a link to edit that musician's info" do
+        describe "when I click the link" do
+          it "I should be taken to that musicians edit page" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+            musician_1 = Musician.create!(
+              name: "Yumi Hwang-Williams",
+              full_time: true,
+              years_involved: 23,
+              orchestra_id: orchestra_1.id
+            )
+
+            visit "/musicians"
+
+            expect(page).to have_content("Update #{musician_1.name}")
+
+            click_link("Update #{musician_1.name}")
+
+            expect(current_path).to eq("/musicians/#{musician_1.id}/edit")
+          end
+        end
+      end
+    end
+  end
 end

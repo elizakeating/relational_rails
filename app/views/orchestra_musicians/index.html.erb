@@ -11,4 +11,5 @@
   <h2><%= musician.name %></h2>
   <p>Full Time: <%= musician.full_time %></p>
   <p>Years Involved: <%= musician.years_involved %></p>
+  <%= link_to "Update #{musician.name}", "/musicians/#{musician.id}/edit"%>
 <% end %>

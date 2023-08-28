@@ -199,7 +199,7 @@ I'm taken back to the Orchestra's musicians Index Page where I see all of the or
 
 ## Usability
 
-[ ] done
+[x] done
 
 User Story 17, Parent Update From Parent Index Page 
 
@@ -211,7 +211,7 @@ I should be taken to that orchestra's edit page where I can update its informati
 
 -----
 
-[ ] done
+[x] done
 
 User Story 18, Child Update From Childs Index Page 
 
