@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   get "/orchestras/:id/musicians", to: "orchestra_musicians#index"
   get "/orchestras/:id/musicians/new", to: "orchestra_musicians#new"
   post "/orchestras/:id/musicians", to: "orchestra_musicians#create"
-  get "/orchestras/:id/musicians/alphabetize", to: "orchestra_musicians#alphabetize"
 
   get "/musicians", to: "musicians#index"
   get "/musicians/:id", to: "musicians#show"

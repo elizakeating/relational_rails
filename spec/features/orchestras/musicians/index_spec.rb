@@ -86,7 +86,7 @@ RSpec.describe "Orchestra Musicians Index",type: :feature do
 
             click_link("Sort By Name Alphabetically")
 
-            expect(current_path).to eq("/orchestras/#{orchestra_1.id}/musicians/alphabetize")
+            expect(current_path).to eq("/orchestras/#{orchestra_1.id}/musicians")
 
             expect("#{musician_2.name}").to appear_before("#{musician_1.name}")
           end

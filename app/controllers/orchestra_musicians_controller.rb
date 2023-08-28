@@ -1,7 +1,11 @@
 class OrchestraMusiciansController < ApplicationController
   def index
     @orchestra = Orchestra.find(params[:id])
-    @musicians = @orchestra.musicians
+    if params[:sort] == "name"
+      @musicians = @orchestra.musicians.order(:name)
+    else
+      @musicians = @orchestra.musicians
+    end
   end
 
   def new
@@ -19,10 +23,5 @@ class OrchestraMusiciansController < ApplicationController
     orchestra_musician.save
 
     redirect_to "/orchestras/#{orchestra.id}/musicians"
-  end
-
-  def alphabetize
-    @orchestra = Orchestra.find(params[:id])
-    @musicians = @orchestra.musicians.order(:name)
   end
 end
