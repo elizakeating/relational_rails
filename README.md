@@ -1,3 +1,19 @@
+# Orchestras and Musicians Relattional Rails
+
+This project implements a one to many relationship with Orchestras and Musicians. Features of this app include:
+
+- An index of all orchestras
+- An index of all musicians
+- An index of a certain orchestra's musicians
+- Create new forms for orchestras and musicians
+- Update forms for orchestras and musicians
+- Delete feature of orchestras and musicians
+- Ways to sort various pages
+
+## Database Setup
+
+![Orchestras and Musicians database schema](database_schema.png)
+
 # Iteration 1
 
 ## CRUD
