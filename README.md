@@ -253,7 +253,7 @@ and I am redirected to the musician index page where I no longer see this musici
 
 ## ActiveRecord
 
-[ ] done
+[x] done
 
 User Story 21, Display Records Over a Given Threshold 
 
