@@ -13,4 +13,4 @@
 
 <%= link_to "Update Orchestra", "/orchestras/#{@orchestra.id}/edit" %>
 
-<%= link_to "Delete Orchestra", "/orchestras/#{@orchestra.id}", method: :delete %>
+<%= link_to "Delete Orchestra", "/orchestras/#{@orchestra.id}", data: { turbo_method: :delete } %>
