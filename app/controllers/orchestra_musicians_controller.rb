@@ -1,13 +1,7 @@
 class OrchestraMusiciansController < ApplicationController
   def index
     @orchestra = Orchestra.find(params[:id])
-    if params[:sort] == "name"
-      @musicians = @orchestra.musicians.order(:name)
-    elsif params[:sort] == "threshold"
-      @musicians = @orchestra.musicians.where("years_involved > #{params[:threshold_value]}")
-    else
-      @musicians = @orchestra.musicians
-    end
+    @musicians = @orchestra.sort(params)
   end
 
   def new
