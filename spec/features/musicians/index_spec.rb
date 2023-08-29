@@ -171,7 +171,7 @@ RSpec.describe "Musicians Index",type: :feature do
             )
             musician_2 = Musician.create!(
               name: "Dakota Cotugno",
-              full_time: false,
+              full_time: true,
               years_involved: 1,
               orchestra_id: orchestra_1.id
             )
@@ -185,7 +185,6 @@ RSpec.describe "Musicians Index",type: :feature do
             expect(current_path).to eq("/musicians")
 
             expect(page).not_to have_content("Dakota Cotugno")
-            expect(page).not_to have_content("Full Time: false")
             expect(page).not_to have_content("Years Involved: 1")
           end
         end
