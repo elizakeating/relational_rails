@@ -130,8 +130,6 @@ RSpec.describe "Orchestra Show",type: :feature do
             expect(page).not_to have_content("#{musician_2.name}")
             expect(page).not_to have_content("Full Time: #{musician_2.full_time}")
             expect(page).not_to have_content("Years Involved: #{musician_2.years_involved}")
-
-            expect(page)
           end
         end
       end
