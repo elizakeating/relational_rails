@@ -8,3 +8,5 @@
 <p>Years Involved: <%= @musician.years_involved %></p>
 
 <%= link_to "Update Musician", "/musicians/#{@musician.id}/edit" %>
+
+<%= link_to "Delete #{@musician.name}", "/musicians/#{@musician.id}", data: { turbo_method: :delete } %>

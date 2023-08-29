@@ -225,7 +225,7 @@ I should be taken to that `musicians` edit page where I can update its informati
 
 ## CRUD
 
-[ ] done
+[x] done
 
 User Story 19, Parent Delete 
 
@@ -239,7 +239,7 @@ and I am redirected to the orchestra index page where I no longer see this orche
 
 -----
 
-[ ] done
+[x] done
 
 User Story 20, Child Delete 
 

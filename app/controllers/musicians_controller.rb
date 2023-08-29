@@ -23,4 +23,9 @@ class MusiciansController < ApplicationController
     
     redirect_to "/musicians/#{musician.id}"
   end
+
+  def destroy
+    Musician.destroy(params[:id])
+    redirect_to "/musicians"
+  end
 end

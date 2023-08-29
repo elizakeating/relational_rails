@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/orchestras/:id", to: "orchestras#show"
   get "/orchestras/:id/edit", to: "orchestras#edit"
   patch "/orchestras/:id", to: "orchestras#update"
+  delete "/orchestras/:id", to: "orchestras#destroy"
 
   get "/orchestras/:id/musicians", to: "orchestra_musicians#index"
   get "/orchestras/:id/musicians/new", to: "orchestra_musicians#new"
@@ -19,4 +20,5 @@ Rails.application.routes.draw do
   get "/musicians/:id", to: "musicians#show"
   get "/musicians/:id/edit", to: "musicians#edit"
   patch "/musicians/:id", to: "musicians#update"
+  delete "/musicians/:id", to: "musicians#destroy"
 end

@@ -1,15 +1,10 @@
-<form action="/orchestras/<%= @orchestra.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <h1>Update Orchestra</h1>
-  <p>Orchestra Name:</p>
-  <input type="text" name="name" value="<%= @orchestra.name %>"/><br/>
-  <p>Auditions Open:</p>
-  <select name="auditions_open" id="options" value="<%= @orchestra.auditions_open %>">
-    <option value="true">true</option>
-    <option value="false">false</option>
-  </select>
-  <p>Year Established:</p>
-  <input type="number" name="year_established" value="<%= @orchestra.year_established %>" /><br/>
-  <br><input type="submit" value="Update Orchestra">
-</form>
+<h1>Update Orchestra</h1>
+<%= form_with url: "/orchestras/#{@orchestra.id}", method: :patch, data: { turbo: false } do |form| %>
+  <%= form.label :name, "Orchestra Name:" %><br/>
+  <%= form.text_field :name, value: "#{@orchestra.name}" %><br/>
+  <br><%= form.label :auditions_open, "Auditions Open:" %><br/>
+  <%= form.select :auditions_open, ["true", "false"], value: "#{@orchestra.auditions_open}" %><br/>
+  <br><%= form.label :year_established, "Year Established:" %><br/>
+  <%= form.number_field :year_established, value: "#{@orchestra.year_established}" %><br/>
+  <br><%= form.submit "Update #{@orchestra.name}" %>
+<% end %>
