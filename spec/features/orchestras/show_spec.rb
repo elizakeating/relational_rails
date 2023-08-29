@@ -20,7 +20,7 @@ RSpec.describe "Orchestra Show",type: :feature do
       orchestra_id: @orchestra_1.id
     )
   end
-  
+
   describe "as a visitor" do
     describe "when I visit '/orchestras/:id'" do
       it "I see the orchestra with that id including the orchestra's attributes" do
@@ -70,7 +70,7 @@ RSpec.describe "Orchestra Show",type: :feature do
 
             expect(page).to have_content("Delete #{@orchestra_1.name}")
 
-            click_link("Delete #{@orchestra_1.name}")
+            click_button("Delete #{@orchestra_1.name}")
 
             expect(current_path).to eq("/orchestras")
 
