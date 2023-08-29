@@ -186,4 +186,30 @@ RSpec.describe "Orchestras Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit the orchestra index page" do
+      describe "next to every orchestra, I see a link to delete that orchestra" do
+        describe "when I click the link" do
+          it "I am returned to the orchestra index page where I no longer see that orchestra" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+
+            visit "/orchestras"
+
+            expect(page).to have_content("Delete #{orchestra_1.name}")
+
+            click_link("Update #{orchestra_1.name}")
+
+            expect(current_path).to eq("/orchestras")
+
+            expect(page).not_to have_content("#{orchestra_1.name}")
+          end
+        end
+      end
+    end
+  end
 end
