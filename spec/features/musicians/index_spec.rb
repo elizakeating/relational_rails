@@ -125,7 +125,7 @@ RSpec.describe "Musicians Index",type: :feature do
 
             expect(page).to have_content("Delete #{@musician_2.name}")
 
-            click_link("Delete #{@musician_2.name}")
+            click_button("Delete #{@musician_2.name}")
 
             expect(current_path).to eq("/musicians")
 
