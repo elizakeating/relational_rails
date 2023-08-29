@@ -202,7 +202,7 @@ RSpec.describe "Orchestras Index",type: :feature do
 
             expect(page).to have_content("Delete #{orchestra_1.name}")
 
-            click_link("Update #{orchestra_1.name}")
+            click_link("Delete #{orchestra_1.name}")
 
             expect(current_path).to eq("/orchestras")
 
