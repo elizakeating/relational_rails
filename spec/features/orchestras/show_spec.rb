@@ -72,9 +72,9 @@ RSpec.describe "Orchestra Show",type: :feature do
 
             visit "/orchestras/#{orchestra_1.id}"
 
-            expect(page).to have_content("Update Orchestra")
+            expect(page).to have_content("Update #{orchestra_1.name}")
 
-            click_link("Update Orchestra")
+            click_link("Update #{orchestra_1.name}")
 
             expect(current_path).to eq("/orchestras/#{orchestra_1.id}/edit")
           end
