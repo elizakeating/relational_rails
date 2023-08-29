@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/orchestras/:id", to: "orchestras#show"
   get "/orchestras/:id/edit", to: "orchestras#edit"
   patch "/orchestras/:id", to: "orchestras#update"
+  delete "/orchestras/:id", to: "orchestras#destroy"
 
   get "/orchestras/:id/musicians", to: "orchestra_musicians#index"
   get "/orchestras/:id/musicians/new", to: "orchestra_musicians#new"
