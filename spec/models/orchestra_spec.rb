@@ -7,12 +7,6 @@ RSpec.describe Orchestra,type: :model do
       auditions_open: true,
       year_established: 1989
     )
-    sleep(1)
-    @orchestra_2 = Orchestra.create!(
-      name: "Chicago Symphony Orchestra",
-      auditions_open: false,
-      year_established: 1891
-    )
     @musician_1 = Musician.create!(
       name: "Yumi Hwang-Williams",
       full_time: true,
@@ -24,6 +18,11 @@ RSpec.describe Orchestra,type: :model do
       full_time: false,
       years_involved: 1,
       orchestra_id: @orchestra_1.id
+    )
+    @orchestra_2 = Orchestra.create!(
+      name: "Chicago Symphony Orchestra",
+      auditions_open: false,
+      year_established: 1891
     )
   end
 
