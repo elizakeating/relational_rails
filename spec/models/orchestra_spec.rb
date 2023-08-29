@@ -28,4 +28,23 @@ RSpec.describe Orchestra,type: :model do
       expect(orchestra_1.count_musicians).to eq(2)
     end
   end
+
+  describe "#descending_created_at" do
+    it "sorts orchestras by descending created at order" do
+      orchestra_1 = Orchestra.create!(
+        name: "Colorado Symphony",
+        auditions_open: true,
+        year_established: 1989
+      )
+      sleep(1)
+      orchestra_2 = Orchestra.create!(
+        name: "Chicago Symphony Orchestra",
+        auditions_open: false,
+        year_established: 1891
+      )
+      sleep(1)
+
+      expect(Orchestra.descending_created_at).to eq([orchestra_2, orchestra_1])
+    end
+  end
 end
