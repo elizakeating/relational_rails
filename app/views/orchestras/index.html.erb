@@ -1,3 +1,4 @@
+<%= link_to "Welcome Page", "/" %>
 <%= link_to "Musicians Index", "/musicians" %>
 <%= link_to "Orchestras Index", "/orchestras" %>
 
@@ -6,7 +7,7 @@
 <%= link_to "New Orchestra", "/orchestras/new" %>
 
 <% @orchestras.each do |orchestra| %>
-  <h3><%= orchestra.name %></h3>
+  <h3><%= link_to "#{orchestra.name}", "/orchestras/#{orchestra.id}" %></h3>
   <p>Created At: <%= orchestra.created_at %><p>
   <%= link_to "Update #{orchestra.name}", "/orchestras/#{orchestra.id}/edit" %><br/>
   <%= button_to "Delete #{orchestra.name}", "/orchestras/#{orchestra.id}", method: :delete %>

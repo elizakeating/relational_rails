@@ -1,3 +1,4 @@
+<%= link_to "Welcome Page", "/" %>
 <%= link_to "Musicians Index", "/musicians" %>
 <%= link_to "Orchestras Index", "/orchestras" %>
 
@@ -10,7 +11,7 @@
 <%= link_to "Sort by Threshold", "/orchestras/#{@orchestra.id}/musicians/threshold" %>
 
 <% @musicians.each do |musician| %>
-  <h2><%= musician.name %></h2>
+  <h2><%= link_to "#{musician.name}", "/musicians/#{musician.id}" %></h2>
   <p>Full Time: <%= musician.full_time %></p>
   <p>Years Involved: <%= musician.years_involved %></p>
   <%= link_to "Update #{musician.name}", "/musicians/#{musician.id}/edit"%><br/>
