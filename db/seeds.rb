@@ -32,3 +32,51 @@ musician_2 = Musician.create!(
   years_involved: 1,
   orchestra_id: orchestra_1.id
 )
+musician_3 = Musician.create!(
+  name: "Claude Sim",
+  full_time: true,
+  years_involved: 20,
+  orchestra_id: orchestra_1.id
+)
+musician_4 = Musician.create!(
+  name: "Seoyoen Min",
+  full_time: true,
+  years_involved: 4,
+  orchestra_id: orchestra_1.id
+)
+musician_5 = Musician.create!(
+  name: "Robert Chen",
+  full_time: true,
+  years_involved: 24,
+  orchestra_id: orchestra_2.id
+)
+musician_6 = Musician.create!(
+  name: "John Sharp",
+  full_time: false,
+  years_involved: 35,
+  orchestra_id: orchestra_2.id
+)
+musician_7 = Musician.create!(
+  name: "Brant Taylor",
+  full_time: true,
+  years_involved: 15,
+  orchestra_id: orchestra_2.id
+)
+musician_8 = Musician.create!(
+  name: "Jonathan Carney",
+  full_time: true,
+  years_involved: 21,
+  orchestra_id: orchestra_3.id
+)
+musician_9 = Musician.create!(
+  name: "Dariusz Skoraczewski",
+  full_time: false,
+  years_involved: 35,
+  orchestra_id: orchestra_3.id
+)
+musician_10 = Musician.create!(
+  name: "Kristin Ostling",
+  full_time: true,
+  years_involved: 28,
+  orchestra_id: orchestra_3.id
+)
