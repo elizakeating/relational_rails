@@ -5,7 +5,7 @@ class OrchestraMusiciansController < ApplicationController
     if params[:sort] == "name"
       @musicians = @orchestra.musicians.order(:name)
     elsif params[:sort] == "threshold"
-      @musicians = @orchestra.musicians.where("years_involved > 10")
+      @musicians = @orchestra.musicians.where("years_involved > #{params[:threshold_value]}")
     else
       @musicians = @orchestra.musicians
     end
