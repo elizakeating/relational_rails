@@ -1,0 +1,7 @@
+<h1>Sort by Threshold</h1>
+<%= form_with url: "/orchestras/#{@orchestra.id}/musicians", method: :get, data: { turbo: false } do |form| %>
+  <%= form.hidden_field :sort, value: "threshold" %>
+  <%= form.label :threshold_value, "Insert Threshold Value:" %><br/>
+  <%= form.number_field :threshold_value %><br/>
+  <br><%= form.submit "Only return records with more than Threshold Value of Years Involved" %>
+<% end %>

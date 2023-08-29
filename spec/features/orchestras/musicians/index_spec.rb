@@ -124,4 +124,52 @@ RSpec.describe "Orchestra Musicians Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit the Orchestra's musicians Index page" do
+      describe "I see a form that allows me to input a number value" do
+        describe "when I input a number value and click the submit button that reads 'only return records with more than number of column_name'" do
+          it "I am brought back tot he current index page with only the records that meet that threshold shown" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+            musician_1 = Musician.create!(
+              name: "Yumi Hwang-Williams",
+              full_time: true,
+              years_involved: 23,
+              orchestra_id: orchestra_1.id
+            )
+            musician_2 = Musician.create!(
+              name: "Dakota Cotugno",
+              full_time: false,
+              years_involved: 1,
+              orchestra_id: orchestra_1.id
+            )
+
+            visit "/orchestras/#{orchestra_1.id}/musicians"
+
+            expect(page).to have_content("Sort by Threshold")
+
+            click_link("Sort by Threshold")
+
+            expect(current_path).to eq("/orchestras/#{orchestra_1.id}/musicians/threshold")
+
+            expect(page).to have_content("Insert Threshold Value:")
+
+            fill_in "threshold_value", with: "10"
+
+            click_button("Only return records with more than Threshold Value of Years Involved")
+
+            expect(current_path).to eq("/orchestras/#{orchestra_1.id}/musicians")
+
+            expect(page).not_to have_content("Dakota Cotungo")
+            expect(page).not_to have_content("Full Time: false")
+            expect(page).not_to have_content("Years Involved: 1")
+          end
+        end
+      end
+    end
+  end
 end

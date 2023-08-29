@@ -1,8 +1,11 @@
 class OrchestraMusiciansController < ApplicationController
   def index
+    # binding.pry
     @orchestra = Orchestra.find(params[:id])
     if params[:sort] == "name"
       @musicians = @orchestra.musicians.order(:name)
+    elsif params[:sort] == "threshold"
+      @musicians = @orchestra.musicians.where("years_involved > 10")
     else
       @musicians = @orchestra.musicians
     end
@@ -23,5 +26,9 @@ class OrchestraMusiciansController < ApplicationController
     orchestra_musician.save
 
     redirect_to "/orchestras/#{orchestra.id}/musicians"
+  end
+
+  def threshold
+    @orchestra = Orchestra.find(params[:id])
   end
 end
