@@ -9,5 +9,5 @@
   <h3><%= orchestra.name %></h3>
   <p>Created At: <%= orchestra.created_at %><p>
   <%= link_to "Update #{orchestra.name}", "/orchestras/#{orchestra.id}/edit" %>
-  <%= link_to "Delete #{orchestra.name}", "/orchestras", data: { turbo_method: :delete } %>
+  <%= link_to "Delete #{orchestra.name}", "/orchestras/#{orchestra.id}", data: { turbo_method: :delete } %>
 <% end %>
