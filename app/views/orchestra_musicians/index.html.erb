@@ -5,7 +5,7 @@
 
 <%= link_to "Create Musician", "/orchestras/#{@orchestra.id}/musicians/new" %><br/>
 
-<%= link_to "Sort By Name Alphabetically", "/orchestras/#{@orchestra.id}/musicians?sort=name" %>
+<br><%= link_to "Sort By Name Alphabetically", "/orchestras/#{@orchestra.id}/musicians?sort=name" %>
 
 <%= link_to "Sort by Threshold", "/orchestras/#{@orchestra.id}/musicians/threshold" %>
 
@@ -13,6 +13,7 @@
   <h2><%= musician.name %></h2>
   <p>Full Time: <%= musician.full_time %></p>
   <p>Years Involved: <%= musician.years_involved %></p>
-  <%= link_to "Update #{musician.name}", "/musicians/#{musician.id}/edit"%>
-  <%= link_to "Delete #{musician.name}", "/musicians/#{musician.id}", data: { turbo_method: :delete } %>
+  <%= link_to "Update #{musician.name}", "/musicians/#{musician.id}/edit"%><br/>
+  <br><%= button_to "Delete #{musician.name}", "/musicians/#{musician.id}", method: :delete %>
+  <p>~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~</p>
 <% end %>

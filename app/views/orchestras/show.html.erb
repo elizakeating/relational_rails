@@ -11,6 +11,6 @@
 
 <%= link_to "Orchestra's Musicians", "/orchestras/#{@orchestra.id}/musicians" %><br/>
 
-<%= link_to "Update #{@orchestra.name}", "/orchestras/#{@orchestra.id}/edit" %>
+<br><%= link_to "Update #{@orchestra.name}", "/orchestras/#{@orchestra.id}/edit" %><br/>
 
-<%= link_to "Delete #{@orchestra.name}", "/orchestras/#{@orchestra.id}", data: { turbo_method: :delete } %>
+<br><%= button_to "Delete #{@orchestra.name}", "/orchestras/#{@orchestra.id}", method: :delete %><br/>
