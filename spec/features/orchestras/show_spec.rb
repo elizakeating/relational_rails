@@ -113,9 +113,9 @@ RSpec.describe "Orchestra Show",type: :feature do
 
             visit "/orchestras/#{orchestra_1.id}"
 
-            expect(page).to have_content("Delete Orchestra")
+            expect(page).to have_content("Delete #{orchestra_1.name}")
 
-            click_link("Delete Orchestra")
+            click_link("Delete #{orchestra_1.name}")
 
             expect(current_path).to eq("/orchestras")
 
