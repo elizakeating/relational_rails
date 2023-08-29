@@ -265,7 +265,7 @@ Then I am brought back to the current index page with only the records that meet
 
 ## Usability
 
-[ ] done
+[x] done
 
 User Story 22, Parent Delete From Parent Index Page 
 
@@ -277,7 +277,7 @@ I am returned to the Orchestra Index Page where I no longer see that orchestra
 
 -----
 
-[ ] done
+[x] done
 
 User Story 23, Child Delete From Childs Index Page 
 

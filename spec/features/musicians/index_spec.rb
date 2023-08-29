@@ -152,4 +152,43 @@ RSpec.describe "Musicians Index",type: :feature do
       end
     end
   end
+
+  describe "as a visitor" do
+    describe "when I visit the musicians index page" do
+      describe "next to every musician, I see a link to delete that musician" do
+        describe "when I click the link" do
+          it "I should be taken to the musicians index page where I no longer see that musician" do
+            orchestra_1 = Orchestra.create!(
+              name: "Colorado Symphony",
+              auditions_open: true,
+              year_established: 1989
+            )
+            musician_1 = Musician.create!(
+              name: "Yumi Hwang-Williams",
+              full_time: true,
+              years_involved: 23,
+              orchestra_id: orchestra_1.id
+            )
+            musician_2 = Musician.create!(
+              name: "Dakota Cotugno",
+              full_time: true,
+              years_involved: 1,
+              orchestra_id: orchestra_1.id
+            )
+
+            visit "/musicians"
+
+            expect(page).to have_content("Delete #{musician_2.name}")
+
+            click_link("Delete #{musician_2.name}")
+
+            expect(current_path).to eq("/musicians")
+
+            expect(page).not_to have_content("Dakota Cotugno")
+            expect(page).not_to have_content("Years Involved: 1")
+          end
+        end
+      end
+    end
+  end
 end
