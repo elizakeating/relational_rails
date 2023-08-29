@@ -7,6 +7,8 @@
 
 <%= link_to "Sort By Name Alphabetically", "/orchestras/#{@orchestra.id}/musicians?sort=name" %>
 
+<%= link_to "Sort by Threshold", "/orchestras/#{@orchestra.id}/musicians/threshold" %>
+
 <% @musicians.each do |musician| %>
   <h2><%= musician.name %></h2>
   <p>Full Time: <%= musician.full_time %></p>
