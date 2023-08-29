@@ -110,12 +110,6 @@ RSpec.describe "Orchestra Show",type: :feature do
               years_involved: 1,
               orchestra_id: orchestra_1.id
             )
-            musician_3 = Musician.create!(
-              name: "Paul Tyler",
-              full_time: true,
-              years_involved: 15,
-              orchestra_id: orchestra_2.id
-            )
 
             visit "/orchestras/#{orchestra_1.id}"
 
@@ -136,6 +130,8 @@ RSpec.describe "Orchestra Show",type: :feature do
             expect(page).not_to have_content("#{musician_2.name}")
             expect(page).not_to have_content("Full Time: #{musician_2.full_time}")
             expect(page).not_to have_content("Years Involved: #{musician_2.years_involved}")
+
+            expect(page)
           end
         end
       end
