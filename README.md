@@ -1,4 +1,4 @@
-# Orchestras and Musicians Relattional Rails
+# Orchestras and Musicians Relational Rails
 
 This project implements a one to many relationship with Orchestras and Musicians. Features of this app include:
 
