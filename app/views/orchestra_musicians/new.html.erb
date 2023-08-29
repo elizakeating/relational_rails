@@ -1,13 +1,9 @@
-<form action="/orchestras/<%= @orchestra.id %>/musicians" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>Musician Name:</p>
-  <input type="text" name="name"/><br/>
-  <p>Full Time:</p>
-  <select name="full_time" id="options">
-    <option value="true">true</option>
-    <option value="false">false</option>
-  </select>
-  <p>Years Involved:</p>
-  <input type="number" name="years_involved"><br/>
-  <br><input type="submit" value="Create Musician">
-</form>
+<%= form_with url: "/orchestras/#{@orchestra.id}/musicians", method: :post, data: { turbo: false } do |form| %>
+  <%= form.label :name, "Musician Name:" %><br/>
+  <%= form.text_field :name %><br/>
+  <br><%= form.label :full_time, "Full Time:" %><br/>
+  <%= form.select :full_time, ["true", "false"] %><br/>
+  <br><%= form.label :years_involved, "Years Involved:" %><br/>
+  <%= form.number_field :years_involved %><br/>
+  <br><%= form.submit "Create Musician" %>
+<% end %>
