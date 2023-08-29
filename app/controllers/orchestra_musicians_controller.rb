@@ -1,6 +1,5 @@
 class OrchestraMusiciansController < ApplicationController
   def index
-    # binding.pry
     @orchestra = Orchestra.find(params[:id])
     if params[:sort] == "name"
       @musicians = @orchestra.musicians.order(:name)
