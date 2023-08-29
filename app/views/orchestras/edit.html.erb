@@ -6,5 +6,5 @@
   <%= form.select :auditions_open, ["true", "false"], value: "#{@orchestra.auditions_open}" %><br/>
   <br><%= form.label :year_established, "Year Established:" %><br/>
   <%= form.number_field :year_established, value: "#{@orchestra.year_established}" %><br/>
-  <br><%= form.submit "Update Orchestra" %>
+  <br><%= form.submit "Update #{@orchestra.name}" %>
 <% end %>
